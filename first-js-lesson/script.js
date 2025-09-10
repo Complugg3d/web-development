@@ -17,6 +17,7 @@
 // Get DOM elements
 const countDisplay = document.getElementById('count');
 const incrementBtn = document.getElementById('increment');
+const plusfivvvvve = document.getElementById('+5we');
 const decrementBtn = document.getElementById('decrement');
 const resetBtn = document.getElementById('reset');
 
@@ -33,23 +34,35 @@ function updateDisplay() {
     } else if (count < 0) {
         countDisplay.style.color = '#f44336'; // Red for negative
     } else {
-        countDisplay.style.color = '#333'; // Default color for zero
+        countDisplay.style.color = '#d3d3d3'; // Default color for zero
+    }
+    if (count % 5 == 0 && count !== 0) {
+        countDisplay.style.color = '#DC0BF4'; // morado multiplos de 5
     }
 }
 
 // Event Listeners
 incrementBtn.addEventListener('click', () => {
     count++;
+
+    if (count > 10) count = 10; // limite para arriba
+
     updateDisplay();
 });
 
 decrementBtn.addEventListener('click', () => {
     count--;
+    if (count < -10) count = -10; // limite para abajo
     updateDisplay();
 });
 
 resetBtn.addEventListener('click', () => {
     count = 0;
+    updateDisplay();
+});
+
+plusfivvvvve.addEventListener('click', () => {
+    count += 5;
     updateDisplay();
 });
 
