@@ -18,7 +18,25 @@
         <div class="controls">
             <button id="reset">Reset</button>
         </div>
-    </div>
+        <div class="audio">
+  <audio id="resetSound">
+    <source src="sanandreas.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+</div>
+
+<button id="resetBtn">🔄 Reset</button>
+
+<script>
+  const resetBtn = document.getElementById("resetBtn");
+  const resetSound = document.getElementById("resetSound");
+
+  resetBtn.addEventListener("click", () => {
+    // Reproducir sonido al dar clic
+    resetSound.currentTime = 0; // Reinicia el audio desde el inicio
+    resetSound.play();
+  });
+</script>
     <script src="script.js"></script>
 </body>
 </html>
