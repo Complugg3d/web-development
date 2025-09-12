@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Counter App</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Counter App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Counter App</h1>
-        <div class="counter">
-            <button id="decrement">-</button>
-            <span id="count">0</span>
-            <button id="increment">+</button>
-            <button id="+5we">+5</button>
-        </div>
-        <div class="controls">
-            <button id="reset">Reset</button>
-        </div>
-        <div class="controls">
-            <button id="reset">Reset</button>
-            <div class="audio">
-            <audio controls autoplay>
-             <source src="sanandreas.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-            </audio>
-</div>
-    <script src="script.js"></script>
+  <div class="container">
+    <h1>Counter App</h1>
+    <div class="counter">
+      <button id="decrement">-</button>
+      <span id="count">0</span>
+      <button id="increment">+</button>
+      <button id="+5we">+5</button>
+    </div>
+    <div class="controls">
+      <button id="reset">Reset</button>
+    </div>
+    <div class="controls">
+
+      <div class="audio">
+        <audio id="audio-test">
+          <!--
+          You needed to add the id to get it from the script
+          as well I moved the sanandreas.mp3 to the same folder as the index.html
+          I told you about the relative paths, the controls are not needed you are playing the audio from the script
+          -->
+          <source src="sanandreas.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <script src="script.js"></script>
 </body>
+
 </html>
