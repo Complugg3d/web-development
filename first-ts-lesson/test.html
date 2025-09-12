@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Queue Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #5D4037;
+            text-align: center;
+        }
+        .queue-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        .queue {
+            display: flex;
+            gap: 10px;
+            min-height: 120px;
+            padding: 20px;
+            background: #F5F5F5;
+            border-radius: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .customer {
+            background: #8D6E63;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            min-width: 100px;
+            text-align: center;
+            position: relative;
+        }
+        .customer.serving {
+            background: #5D4037;
+            transform: scale(1.05);
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        button, input {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button {
+            background: #5D4037;
+            color: white;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #3E2723;
+        }
+        input {
+            border: 1px solid #ddd;
+            flex-grow: 1;
+            min-width: 200px;
+        }
+        .instructions {
+            background: #FFF3E0;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #5D4037;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>☕ Coffee Shop Queue</h1>
+            <nav>
+                <a href="/">← Back to Home</a>
+            </nav>
+        </header>
+
+        <div class="instructions">
+            <h3>Challenge: Implement a Queue Data Structure</h3>
+            <p>Your task is to implement a queue (First In, First Out) for our coffee shop. Customers are served in the order they arrive.</p>
+            <p>Use the form below to add customers to the queue. The "Next Customer" button should serve the first customer in line.</p>
+        </div>
+
+        <div class="controls">
+            <input type="text" id="customerName" placeholder="Enter customer name" />
+            <button id="addCustomer">Add to Queue</button>
+            <button id="nextCustomer">Next Customer →</button>
+        </div>
+
+        <h2>Queue</h2>
+        <div class="queue-container">
+            <div class="queue" id="queue">
+                <!-- Customer elements will be added here by JavaScript -->
+                <p style="color: #999; margin: 0;">The queue is empty</p>
+            </div>
+        </div>
+
+        <div id="status" style="margin-top: 20px; min-height: 24px;"></div>
+    </div>
+
+    <script type="module" src="./test.js"></script>
+</body>
+</html>
