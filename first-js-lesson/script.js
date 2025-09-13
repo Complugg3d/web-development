@@ -20,6 +20,7 @@ const incrementBtn = document.getElementById('increment');
 const plusfivvvvve = document.getElementById('+5we');
 const decrementBtn = document.getElementById('decrement');
 const resetBtn = document.getElementById('reset');
+const audio = document.getElementById('audio-test'); // You missed the audio element
 
 // Initialize counter
 let count = 0;
@@ -58,6 +59,7 @@ decrementBtn.addEventListener('click', () => {
 
 resetBtn.addEventListener('click', () => {
     count = 0;
+    audio.play();
     updateDisplay();
 });
 
