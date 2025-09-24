@@ -31,7 +31,6 @@ function updateDisplay() {
   // in the html there is available the id count
   // in the css there is available the animation pop
   // now you just have to add the class animate to the countDisplay
-  // to remove the class animate after the animation is over you can use the transitionend event
   // to achieve the goal take a look at https://stackoverflow.com/questions/507138/how-to-add-a-class-to-a-given-element
 
   countDisplay.textContent = count;
