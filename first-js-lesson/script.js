@@ -21,6 +21,7 @@ const plusfivvvvve = document.getElementById("+5we");
 const decrementBtn = document.getElementById("decrement");
 const resetBtn = document.getElementById("reset");
 const audio = document.getElementById("audio-test"); // You missed the audio element
+const element = document.getElementById("count"); // for animation
 
 // Initialize counter
 let count = 0;
@@ -34,6 +35,10 @@ function updateDisplay() {
   // to achieve the goal take a look at https://stackoverflow.com/questions/507138/how-to-add-a-class-to-a-given-element
 
   countDisplay.textContent = count;
+  element.classList.add("animate");
+  setTimeout(() => {
+    element.classList.remove("animate");
+  }, 500);
 
   // Change color based on count
   if (count > 0) {
