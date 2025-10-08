@@ -1,70 +1,107 @@
-/* Reset some default styles */
+ /* Reset some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "arial", sans-serif;
 }
 
 body {
-    background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
 }
 
 .container {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
+  background-color: #253754;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
 }
 
 h1 {
-    color: #333;
-    margin-bottom: 2rem;
+  color: #d3d3d3;
+  margin-bottom: 2rem;
 }
 
 .counter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 0.8rem 1.5rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 #count {
-    font-size: 2.5rem;
-    font-weight: bold;
-    min-width: 60px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  min-width: 60px;
+  transition: transform 0.3s ease;
+}
+
+/* Animation class that will be added/removed by JavaScript */
+#count.animate {
+  animation: pop 0.3s ease-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 #reset {
-    background-color: #f44336;
-    margin-top: 1rem;
+  background-color: #f44336;
+  margin-top: 1rem;
 }
 
 #reset:hover {
-    background-color: #d32f2f;
+  background-color: #d32f2f;
+}
+
+.button {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 9;
 }
